@@ -16,7 +16,7 @@ func Error(format string, a ...interface{}) error {
 	return fmt.Errorf(format, a...)
 }
 
-// Error wraps fmt.Errorf() and panics with the error
+// Panic wraps fmt.Errorf() and panics with the error
 func Panic(format string, a ...interface{}) {
 	panic(Error(format, a...))
 }
