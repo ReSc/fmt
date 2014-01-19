@@ -1,3 +1,4 @@
+// a fmt replacement for non-C programmers.
 package fmt
 
 import (
@@ -15,7 +16,7 @@ func Error(format string, a ...interface{}) error {
 	return fmt.Errorf(format, a...)
 }
 
-// Error wraps fmt.Errorf()
+// Error wraps fmt.Errorf() and panics with the error
 func Panic(format string, a ...interface{}) {
 	panic(Error(format, a...))
 }
