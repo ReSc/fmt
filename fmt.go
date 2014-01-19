@@ -1,4 +1,5 @@
-// a fmt replacement for non-C programmers.
+// A fmt replacement for non-C programmers.
+// See http://godoc.org/fmt for the formatting syntax.
 package fmt
 
 import (
