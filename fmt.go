@@ -12,9 +12,23 @@ func String(format string, a ...interface{}) string {
 	return fmt.Sprintf(format, a...)
 }
 
+func StringJoin(a ...interface{}) string {
+	return fmt.Sprint(a...)
+}
+
 // Error wraps fmt.Errorf()
 func Error(format string, a ...interface{}) error {
 	return fmt.Errorf(format, a...)
+}
+
+// Print wraps fmt.Printf()
+func Print(format string, a ...interface{}) {
+	fmt.Printf(format, a...)
+}
+
+// Print wraps fmt.Printf() and ads a newline
+func Printline(format string, a ...interface{}) {
+	fmt.Printf(format+"\n", a...)
 }
 
 // Panic wraps fmt.Errorf() and panics with the error
