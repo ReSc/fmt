@@ -64,6 +64,15 @@ func (w *Writer) Write(p []byte) (int, error) {
 }
 
 // Writefmt wraps fmt.Fprintf()
+
+func (w *Writer) WriteString(s string) (int, error) {
+	return fmt.Fprint(w, s)
+}
+
+func (w *Writer) WriteQuoted(s string) (int, error) {
+	return fmt.Fprintf(w, "%+q", s)
+}
+
 func (w *Writer) Writefmt(format string, a ...interface{}) (int, error) {
 	return Write(w, format, a...)
 }
